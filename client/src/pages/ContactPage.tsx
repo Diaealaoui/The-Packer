@@ -89,7 +89,7 @@ const ContactPage = () => {
       title: "Téléphone",
       content: "0661482574",
       link: "tel:0661482574",
-      gradient: "from-[#c5a58c] to-[#a38b75]" // Custom kraft gradient
+      gradient: "from-[#008000] to-[#006600]" // Custom green gradient
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -111,13 +111,13 @@ const ContactPage = () => {
     <div className="min-h-screen bg-white">
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#f5e7dc] via-[#faefe6] to-[#fcf5ef] py-16 md:py-24 overflow-hidden"> {/* Custom kraft gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5e7dc]/20 to-[#faefe6]/20"></div> {/* Custom kraft gradient */}
+      <section className="relative bg-gradient-to-br from-[#f0fff0] via-[#f8fff8] to-[#fafffa] py-16 md:py-24 overflow-hidden"> {/* Custom green gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f0fff0]/20 to-[#f8fff8]/20"></div> {/* Custom green gradient */}
         
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-[#e0c0a0] to-[#d5b59c] rounded-full opacity-30"></div> {/* Custom kraft gradient */}
-          <div className="absolute top-1/2 -right-20 w-60 h-60 bg-gradient-to-br from-[#d5b59c] to-[#e0c0a0] rounded-full opacity-20"></div> {/* Custom kraft gradient */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-[#c0ffc0] to-[#008000] rounded-full opacity-30"></div> {/* Custom green gradient */}
+          <div className="absolute top-1/2 -right-20 w-60 h-60 bg-gradient-to-br from-[#008000] to-[#c0ffc0] rounded-full opacity-20"></div> {/* Custom green gradient */}
         </div>
         
         <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
@@ -125,19 +125,19 @@ const ContactPage = () => {
           <nav className="mb-8">
             <ol className="flex items-center space-x-2 text-sm">
               <li>
-                <a href="/" className="text-gray-500 hover:text-[#a38b75] transition-colors duration-200 flex items-center"> {/* Custom kraft text */}
+                <a href="/" className="text-gray-500 hover:text-[#006600] transition-colors duration-200 flex items-center"> {/* Custom green text */}
                   <Home className="h-4 w-4" />
                 </a>
               </li>
               <li>
                 <ChevronRight className="h-4 w-4 text-gray-400 mx-2" />
               </li>
-              <li className="text-[#a38b75] font-medium">Contact</li> {/* Custom kraft text */}
+              <li className="text-[#006600] font-medium">Contact</li> {/* Custom green text */}
             </ol>
           </nav>
 
           <div className="text-center">
-            <div className="inline-flex items-center bg-white/80 backdrop-blur-sm text-[#8d7560] px-6 py-3 rounded-full text-sm font-medium mb-8 shadow-lg"> {/* Custom kraft text */}
+            <div className="inline-flex items-center bg-white/80 backdrop-blur-sm text-[#004d00] px-6 py-3 rounded-full text-sm font-medium mb-8 shadow-lg"> {/* Custom green text */}
               <Mail className="w-4 h-4 mr-2" />
               Restons en Contact
             </div>
@@ -177,11 +177,11 @@ const ContactPage = () => {
                     {info.icon}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
-                  <p className="text-gray-600 group-hover:text-[#a38b75] transition-colors duration-300"> {/* Custom kraft text */}
+                  <p className="text-gray-600 group-hover:text-[#006600] transition-colors duration-300"> {/* Custom green text */}
                     {info.content}
                   </p>
                   <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <ChevronRight className="w-4 h-4 text-[#d5b59c]" /> {/* Custom kraft text */}
+                    <ChevronRight className="w-4 h-4 text-[#008000]" /> {/* Custom green text */}
                   </div>
                 </div>
               </a>
@@ -191,7 +191,7 @@ const ContactPage = () => {
       </section>
 
       {/* Main Contact Section - Removed the "Envoyez-nous un Message" box */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-[#f5e7dc]"> {/* Custom kraft background */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-[#f0fff0]"> {/* Custom green background */}
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="lg:flex gap-16">
             {/* Contact Information Sidebar - Moved to occupy full width if no form */}
@@ -202,10 +202,10 @@ const ContactPage = () => {
                 isVisible['contact-info'] ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <div className="bg-gradient-to-br from-[#a38b75] to-[#8d7560] rounded-3xl p-8 text-white"> {/* Custom kraft gradient */}
+              <div className="bg-gradient-to-br from-[#006600] to-[#004d00] rounded-3xl p-8 text-white"> {/* Custom green gradient */}
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold mb-4">Informations de Contact</h3>
-                  <p className="text-[#f0e0d0] leading-relaxed"> {/* Custom kraft text */}
+                  <p className="text-[#c0ffc0] leading-relaxed"> {/* Custom green text */}
                     Nous sommes là pour vous aider à trouver les meilleures solutions d'emballage 
                     pour votre entreprise.
                   </p>
@@ -218,7 +218,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Téléphone</h4>
-                      <a href="tel:0661482574" className="text-[#f0e0d0] hover:text-white transition-colors"> {/* Custom kraft text */}
+                      <a href="tel:0661482574" className="text-[#c0ffc0] hover:text-white transition-colors"> {/* Custom green text */}
                         0661482574
                       </a>
                     </div>
@@ -230,7 +230,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Email</h4>
-                      <a href="mailto:thepacker.yassine@gmail.com" className="text-[#f0e0d0] hover:text-white transition-colors break-all"> {/* Custom kraft text */}
+                      <a href="mailto:thepacker.yassine@gmail.com" className="text-[#c0ffc0] hover:text-white transition-colors break-all"> {/* Custom green text */}
                         thepacker.yassine@gmail.com
                       </a>
                     </div>
@@ -246,7 +246,7 @@ const ContactPage = () => {
                         href="https://instagram.com/thepacker_morocco" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-[#f0e0d0] hover:text-white transition-colors" /* Custom kraft text */
+                        className="text-[#c0ffc0] hover:text-white transition-colors" /* Custom green text */
                       >
                         @thepacker_morocco
                       </a>
@@ -258,7 +258,7 @@ const ContactPage = () => {
 
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <h4 className="font-semibold mb-3">Horaires de Réponse</h4>
-                  <div className="space-y-2 text-[#f0e0d0]"> {/* Custom kraft text */}
+                  <div className="space-y-2 text-[#c0ffc0]"> {/* Custom green text */}
                     <p>Lundi - Vendredi: 9h - 18h</p>
                     <p>Samedi: 9h - 16h</p>
                     <p>Dimanche: Sur rendez-vous</p>
@@ -280,7 +280,7 @@ const ContactPage = () => {
               isVisible.faq ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="inline-flex items-center bg-[#f5e7dc] text-[#8d7560] px-4 py-2 rounded-full text-sm font-medium mb-6"> {/* Custom kraft bg/text */}
+            <div className="inline-flex items-center bg-[#f0fff0] text-[#004d00] px-4 py-2 rounded-full text-sm font-medium mb-6"> {/* Custom green bg/text */}
               <Star className="w-4 h-4 mr-2" />
               Questions Fréquentes
             </div>
@@ -321,7 +321,7 @@ const ContactPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-[#a38b75] to-[#8d7560] text-white"> {/* Custom kraft gradient */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-[#006600] to-[#004d00] text-white"> {/* Custom green gradient */}
         <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Prêt à Commencer ?
@@ -333,14 +333,14 @@ const ContactPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:0661482574"
-              className="bg-white text-[#a38b75] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center" /* Custom kraft text */
+              className="bg-white text-[#006600] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center" /* Custom green text */
             >
               <Phone className="w-5 h-5 mr-2" />
               Appelez-nous
             </a>
             <a 
               href="mailto:thepacker.yassine@gmail.com"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#a38b75] transition-all duration-300 transform hover:scale-105 flex items-center justify-center" /* Custom kraft text */
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#006600] transition-all duration-300 transform hover:scale-105 flex items-center justify-center" /* Custom green text */
             >
               <Mail className="w-5 h-5 mr-2" />
               Envoyez un Email

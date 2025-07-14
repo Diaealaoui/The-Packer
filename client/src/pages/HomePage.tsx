@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "wouter";
 
 // Import design images
-import design1Image from '../pics/design.jpeg';
-import design2Image from '../pics/design2.jpeg';
+import design1Image from '../pics/design.jpg';
+import design2Image from '../pics/design2.jpg';
 import design3Image from '../pics/design3.jpeg';
-import design4Image from '../pics/design4.jpeg';
-import design5Image from '../pics/design5.jpeg';
+import design4Image from '../pics/carton3.jpeg';
+import design5Image from '../pics/carton.jpeg';
 
 // Import images for the slider
 import cartonImage1 from '../pics/carton.jpg';
 import cartonImage2 from '../pics/carton2.jpg';
 import cartonImage3 from '../pics/carton3.jpg';
 import homepageImage from '../pics/homepage.jpeg'; // Renamed from 'homepage' to 'homepageImage' for clarity
-import usineImage from '../pics/usine.jpg'; // New import for the factory section
+import usineImage from '../pics/usine.jpeg'; // New import for the factory section
 
 const HomePage = () => {
   const sliderImages = [cartonImage1, cartonImage2, cartonImage3, homepageImage]; // Added homepageImage to slider
@@ -32,7 +32,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[600px] lg:min-h-screen flex items-center justify-center py-20 overflow-hidden">
         {/* Background gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5e7dc]/20 to-[#faefe6]/20 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f0fff0]/20 to-[#f8fff8]/20 z-10"></div>
 
         {/* Image Slider as full background */}
         <div className="absolute inset-0 z-0">
@@ -54,15 +54,15 @@ const HomePage = () => {
           <div className="flex items-center justify-center h-full">
             {/* Main Content Block */}
             <div className="w-full lg:max-w-3xl mx-auto p-8 bg-white bg-opacity-80 rounded-xl shadow-lg backdrop-blur-sm text-center">
-              <div className="inline-flex items-center bg-[#e0c0a0] text-[#8d7560] px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-[#d5b59c] rounded-full mr-2"></span>
+              <div className="inline-flex items-center bg-[#e6ffe6] text-[#004d00] px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <span className="w-2 h-2 bg-[#008000] rounded-full mr-2"></span>
                 Produits Compostables et Recyclables
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6 leading-tight">
                 Emballages
-                <span className="block font-semibold text-[#a38b75]">Durables</span>
-                <span className="block font-light text-[#d5b59c]">& Innovants</span>
+                <span className="block font-semibold text-[#006600]">Durables</span>
+                <span className="block font-light text-[#008000]">& Innovants</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -73,12 +73,12 @@ const HomePage = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/products">
-                  <button className="bg-[#a38b75] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#8d7560] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                  <button className="bg-[#006600] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#004d00] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                     Explorer le Catalogue
                   </button>
                 </Link>
                 <Link href="/about">
-                  <button className="border-2 border-[#a38b75] text-[#a38b75] px-8 py-4 rounded-lg font-semibold hover:bg-[#f5e7dc] transition-all duration-300">
+                  <button className="border-2 border-[#006600] text-[#006600] px-8 py-4 rounded-lg font-semibold hover:bg-[#f0fff0] transition-all duration-300">
                     Notre Mission
                   </button>
                 </Link>
@@ -106,7 +106,7 @@ const HomePage = () => {
             
             {/* Feature 1 */}
             <div className="text-center group transform hover:scale-105 transition-transform duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#e0c0a0] to-[#d5b59c] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#e6ffe6] to-[#008000] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
@@ -120,8 +120,8 @@ const HomePage = () => {
             
             {/* Feature 2 */}
             <div className="text-center group transform hover:scale-105 transition-transform duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#faefe6] to-[#f5e7dc] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
-                <svg className="w-10 h-10 text-[#a38b75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#f8fff8] to-[#f0fff0] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
+                <svg className="w-10 h-10 text-[#006600]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -134,8 +134,8 @@ const HomePage = () => {
             
             {/* Feature 3 */}
             <div className="text-center group transform hover:scale-105 transition-transform duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#fcf5ef] to-[#faefe6] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
-                <svg className="w-10 h-10 text-[#d5b59c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#fafffa] to-[#f8fff8] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
+                <svg className="w-10 h-10 text-[#008000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
@@ -150,7 +150,7 @@ const HomePage = () => {
       </section>
 
       {/* Product Showcase */}
-      <section className="py-20 bg-gradient-to-br from-stone-50 to-[#f5e7dc]">
+      <section className="py-20 bg-gradient-to-br from-stone-50 to-[#f0fff0]">
         <div className="container mx-auto px-6 max-w-7xl">
           
           <div className="text-center mb-16">
@@ -181,7 +181,7 @@ const HomePage = () => {
                   sandwichs et plats chauds avec une excellente résistance.
                 </p>
                 <Link href="/products?category=burger">
-                  <button className="text-[#a38b75] font-semibold hover:text-[#8d7560] transition-colors flex items-center">
+                  <button className="text-[#006600] font-semibold hover:text-[#004d00] transition-colors flex items-center">
                     Découvrir 
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -207,7 +207,7 @@ const HomePage = () => {
                   nouilles, soupes et plats liquides avec étanchéité garantie.
                 </p>
                 <Link href="/products?category=pots">
-                  <button className="text-[#a38b75] font-semibold hover:text-[#8d7560] transition-colors flex items-center">
+                  <button className="text-[#006600] font-semibold hover:text-[#004d00] transition-colors flex items-center">
                     Découvrir 
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -233,7 +233,7 @@ const HomePage = () => {
                   repas gastronomiques et événements spéciaux.
                 </p>
                 <Link href="/products?category=lunchbox">
-                  <button className="text-[#a38b75] font-semibold hover:text-[#8d7560] transition-colors flex items-center">
+                  <button className="text-[#006600] font-semibold hover:text-[#004d00] transition-colors flex items-center">
                     Découvrir 
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -247,7 +247,7 @@ const HomePage = () => {
       </section>
 
       {/* New Factory Section */}
-      <section className="py-20 bg-gradient-to-br from-[#f5e7dc] to-[#faefe6]"> {/* Custom kraft background */}
+      <section className="py-20 bg-gradient-to-br from-[#f0fff0] to-[#f8fff8]"> {/* Custom kraft background */}
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="lg:flex items-center gap-16">
             {/* Factory Image */}
@@ -265,8 +265,8 @@ const HomePage = () => {
             </div>
             {/* Factory Content */}
             <div className="lg:w-1/2 lg:pl-12">
-              <div className="inline-flex items-center bg-[#e0c0a0] text-[#8d7560] px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-[#d5b59c] rounded-full mr-2"></span>
+              <div className="inline-flex items-center bg-[#e6ffe6] text-[#004d00] px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <span className="w-2 h-2 bg-[#008000] rounded-full mr-2"></span>
                 Processus de Fabrication
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -280,15 +280,15 @@ const HomePage = () => {
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-[#d5b59c] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-[#008000] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   Technologies de pointe
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-[#d5b59c] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-[#008000] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   Contrôle qualité rigoureux
                 </li>
                 <li className="flex items-center">
-                  <svg className="w-5 h-5 text-[#d5b59c] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-[#008000] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   Production éco-responsable
                 </li>
               </ul>
@@ -324,8 +324,8 @@ const HomePage = () => {
             
             {/* Right - Content */}
             <div className="lg:w-1/2 lg:pl-12">
-              <div className="inline-flex items-center bg-[#e0c0a0] text-[#8d7560] px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-[#d5b59c] rounded-full mr-2"></span>
+              <div className="inline-flex items-center bg-[#e6ffe6] text-[#004d00] px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <span className="w-2 h-2 bg-[#008000] rounded-full mr-2"></span>
                 Notre Engagement
               </div>
               
@@ -341,7 +341,7 @@ const HomePage = () => {
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <div className="w-6 h-6 bg-[#d5b59c] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-[#008000] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -353,7 +353,7 @@ const HomePage = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-6 h-6 bg-[#d5b59c] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-[#008000] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -365,7 +365,7 @@ const HomePage = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-6 h-6 bg-[#d5b59c] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 bg-[#008000] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -378,7 +378,7 @@ const HomePage = () => {
               </div>
               
               <Link href="/about">
-                <button className="bg-[#a38b75] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#8d7560] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <button className="bg-[#006600] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#004d00] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                   En Savoir Plus
                 </button>
               </Link>
@@ -388,7 +388,7 @@ const HomePage = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-20 bg-gradient-to-r from-[#a38b75] to-[#8d7560] text-white">
+      <section className="py-20 bg-gradient-to-r from-[#006600] to-[#004d00] text-white">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Nos Résultats en Chiffres</h2>
@@ -419,7 +419,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#a38b75] to-[#8d7560] text-white">
+      <section className="py-20 bg-gradient-to-r from-[#006600] to-[#004d00] text-white">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">
             Prêt à Révolutionner Vos Emballages?
@@ -430,7 +430,7 @@ const HomePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/products">
-              <button className="bg-white text-[#a38b75] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
+              <button className="bg-white text-[#006600] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
                 Voir le Catalogue Complet
               </button>
             </Link>

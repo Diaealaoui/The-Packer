@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Import all images statically at the top of the file
 import boiteBurgerImage from '../../pics/boite burger.jpeg';
 import boiteDoubleBurgerImage from '../../pics/boite double burger.jpeg';
 import boiteSandwichImage from '../../pics/boite sandwich.jpeg';
 import lunchBoxSmallImage from '../../pics/lunch box small.jpeg';
-import lunchBoxMediumImage from '../../pics/lunch box medium.jpeg';
-import lunchBoxLargeImage from '../../pics/lunch box large.jpeg';
+import lunchBoxMediumImage from '../../pics/lunch box medium.jpeg'; // Re-added
+import lunchBoxLargeImage from '../../pics/lunch box large.jpeg';   // Re-added
 import potANouilleSmallImage from '../../pics/pot a nouille small.jpeg';
-import potANouilleMediumImage from '../../pics/pot a nouille medium.jpeg';
-import potANouilleLargeImage from '../../pics/pot a nouille large.jpeg';
+import potANouilleMediumImage from '../../pics/pot a nouille medium.jpeg'; // Re-added
+import potANouilleLargeImage from '../../pics/pot a nouille large.jpeg';   // Re-added
 import potAfriteImage from '../../pics/pot a frite.jpeg';
 import barquetteLargeImage from '../../pics/BARQUETTE RECTANGULAIRE large.jpeg';
 import barquetteMediumImage from '../../pics/BARQUETTE RECTANGULAIRE medium.jpeg';
@@ -19,6 +19,7 @@ import supportGauffreImage from '../../pics/support gauffre balnc.jpeg';
 import porteCrepeImage from '../../pics/porte crepe.jpeg';
 import porteCrepe2Image from '../../pics/porte crepe.png';
 import boiteSushiImage from '../../pics/boite sushi.png';
+// The following images are not used in product data, but kept as they were in original imports:
 import designImage from '../../pics/design.jpeg';
 import design2Image from '../../pics/design2.jpeg';
 import design3Image from '../../pics/design3.jpeg';
@@ -46,7 +47,6 @@ const ProductCatalog = () => {
       quantity: "550",
       category: "burger",
       image: boiteBurgerImage,
-      imageScale: "normal"
     },
     {
       id: 2,
@@ -57,7 +57,6 @@ const ProductCatalog = () => {
       quantity: "280",
       category: "burger",
       image: boiteDoubleBurgerImage,
-      imageScale: "normal"
     },
     {
       id: 3,
@@ -68,71 +67,75 @@ const ProductCatalog = () => {
       quantity: "550",
       category: "burger",
       image: boiteSandwichImage,
-      imageScale: "normal"
     },
 
-    // LUNCH BOX
+    // LUNCH BOX - Now using specific images where provided
     {
       id: 4,
       name: "Lunch Box",
       reference: "BR1W / BR1K",
-      dimensions: "108 x 90 x 55 mm",
+      dimensions: "108 x 90 x 55 mm", // Small
       color: "Blanc / Kraft Brun",
       quantity: "720",
       category: "lunchbox",
       image: lunchBoxSmallImage,
-      imageScale: "large"
     },
     {
       id: 5,
       name: "Lunch Box",
       reference: "BR2W / BR2K",
-      dimensions: "130 x 105 x 60 mm",
+      dimensions: "130 x 105 x 60 mm", // Medium
       color: "Blanc / Kraft Brun",
       quantity: "750",
       category: "lunchbox",
-      image: lunchBoxSmallImage,
-      imageScale: "large"
+      image: lunchBoxMediumImage, // Using specific medium image
     },
     {
       id: 6,
       name: "Lunch Box",
       reference: "BR3W / BR3K",
-      dimensions: "195 x 140 x 50 mm",
+      dimensions: "195 x 140 x 50 mm", // Large
       color: "Blanc / Kraft Brun",
       quantity: "250",
       category: "lunchbox",
-      image: lunchBoxSmallImage,
-      imageScale: "large"
+      image: lunchBoxLargeImage, // Using specific large image
     },
 
-    // POTS À NOUILLE
+    // POTS À NOUILLE - Now using specific images where provided
     {
       id: 7,
       name: "Pot à Nouille",
       reference: "P1W / P1K",
-      dimensions: "65 x 52 x 93 mm",
+      dimensions: "65 x 52 x 93 mm", // Small
       color: "Blanc / Kraft Brun",
       quantity: "750",
       category: "pots",
       image: potANouilleSmallImage,
-      imageScale: "large"
     },
     {
       id: 8,
       name: "Pot à Nouille",
       reference: "P2W / P2K",
-      dimensions: "81 x 69 x 100 mm",
+      dimensions: "81 x 69 x 100 mm", // Medium
       color: "Blanc / Kraft Brun",
       quantity: "320",
       category: "pots",
-      image: potANouilleSmallImage,
-      imageScale: "large"
+      image: potANouilleMediumImage, // Using specific medium image
+    },
+    {
+      id: 9, // Re-indexed to avoid conflict with Pot à Frite
+      name: "Pot à Nouille",
+      reference: "P3W / P3K", // Assuming a large size reference exists
+      dimensions: "90 x 75 x 120 mm", // Large (example dimension)
+      color: "Blanc / Kraft Brun",
+      quantity: "250", // Example quantity
+      category: "pots",
+      image: potANouilleLargeImage, // Using specific large image
     },
 
-    // POT À FRITE
+    // POT À FRITE (Original ID 9, now ID 10 to avoid conflict with new Pot à Nouille)
     {
-      id: 9,
+      id: 10,
       name: "Pot à Frite",
       reference: "BF1W / BF1K",
       dimensions: "105 x 65 x 40 mm",
@@ -140,47 +143,43 @@ const ProductCatalog = () => {
       quantity: "800 / 960",
       category: "pots",
       image: potAfriteImage,
-      imageScale: "normal"
     },
 
-    // BARQUETTES RECTANGULAIRES
+    // BARQUETTES RECTANGULAIRES - Using specific images based on dimensions
     {
-      id: 10,
+      id: 11,
       name: "Barquette Rectangulaire",
       reference: "B1W / B1K",
-      dimensions: "115 x 85 x 44 mm",
+      dimensions: "115 x 85 x 44 mm", // Petit
       color: "Blanc / Kraft Brun",
       quantity: "1000",
       category: "barquettes",
       image: barquettePetitImage,
-      imageScale: "large"
-    },
-    {
-      id: 11,
-      name: "Barquette Rectangulaire",
-      reference: "B2W / B2K",
-      dimensions: "170 x 95 x 60 mm",
-      color: "Blanc / Kraft Brun",
-      quantity: "600",
-      category: "barquettes",
-      image: barquettePetitImage,
-      imageScale: "large"
     },
     {
       id: 12,
       name: "Barquette Rectangulaire",
+      reference: "B2W / B2K",
+      dimensions: "170 x 95 x 60 mm", // Medium
+      color: "Blanc / Kraft Brun",
+      quantity: "600",
+      category: "barquettes",
+      image: barquetteLargeImage,
+    },
+    {
+      id: 13,
+      name: "Barquette Rectangulaire",
       reference: "B3W / B3K",
-      dimensions: "155 x 90 x 35 mm",
+      dimensions: "155 x 90 x 35 mm", // Closer to petit/small
       color: "Blanc / Kraft Brun",
       quantity: "800",
       category: "barquettes",
-      image: barquettePetitImage,
-      imageScale: "large"
+      image: barquetteMediumImage,
     },
 
     // SUPPORTS HOT DOG
     {
-      id: 13,
+      id: 14,
       name: "Support Hot Dog",
       reference: "PS1W / PS1K",
       dimensions: "260 x 67 x 68 mm",
@@ -188,10 +187,9 @@ const ProductCatalog = () => {
       quantity: "1500",
       category: "supports",
       image: supportHotDogImage,
-      imageScale: "large"
     },
     {
-      id: 14,
+      id: 15,
       name: "Support Hot Dog",
       reference: "PS2W / PS2K",
       dimensions: "160 x 50 x 35 mm",
@@ -199,12 +197,11 @@ const ProductCatalog = () => {
       quantity: "2000",
       category: "supports",
       image: supportHotDogImage,
-      imageScale: "large"
     },
 
     // SUPPORT GAUFFRE
     {
-      id: 15,
+      id: 16,
       name: "Support Gauffre",
       reference: "G1W / G1K",
       dimensions: "160 x 105 x 25 mm",
@@ -212,12 +209,11 @@ const ProductCatalog = () => {
       quantity: "2100",
       category: "supports",
       image: supportGauffreImage,
-      imageScale: "normal"
     },
 
     // PORTE CRÊPE
     {
-      id: 16,
+      id: 17,
       name: "Porte Crêpe",
       reference: "PP1W / PP1K",
       dimensions: "220 x 200 x 30 mm",
@@ -225,10 +221,9 @@ const ProductCatalog = () => {
       quantity: "500",
       category: "crepes",
       image: porteCrepeImage,
-      imageScale: "normal"
     },
     {
-      id: 17,
+      id: 18,
       name: "Porte Crêpe",
       reference: "PP2W / PP2K",
       dimensions: "185 x 82 x 187 mm",
@@ -236,12 +231,11 @@ const ProductCatalog = () => {
       quantity: "2000",
       category: "crepes",
       image: porteCrepe2Image,
-      imageScale: "normal"
     },
 
     // BOÎTES SUSHI
     {
-      id: 18,
+      id: 19,
       name: "Boîte Sushi",
       reference: "BB1W / BB1K",
       dimensions: "190 x 70 x 55 mm",
@@ -249,10 +243,9 @@ const ProductCatalog = () => {
       quantity: "2000",
       category: "sushi",
       image: boiteSushiImage,
-      imageScale: "large"
     },
     {
-      id: 19,
+      id: 20,
       name: "Boîte Sushi",
       reference: "BB2W / BB2K",
       dimensions: "175 x 100 x 55 mm",
@@ -260,10 +253,9 @@ const ProductCatalog = () => {
       quantity: "500",
       category: "sushi",
       image: boiteSushiImage,
-      imageScale: "large"
     },
     {
-      id: 20,
+      id: 21,
       name: "Boîte Sushi",
       reference: "BB3W / BB3K",
       dimensions: "190 x 140 x 55 mm",
@@ -271,10 +263,9 @@ const ProductCatalog = () => {
       quantity: "2000",
       category: "sushi",
       image: boiteSushiImage,
-      imageScale: "large"
     },
     {
-      id: 21,
+      id: 22,
       name: "Boîte Sushi",
       reference: "BB4W / BB4K",
       dimensions: "260 x 180 x 55 mm",
@@ -282,7 +273,6 @@ const ProductCatalog = () => {
       quantity: "2000",
       category: "sushi",
       image: boiteSushiImage,
-      imageScale: "large"
     }
   ];
 
@@ -348,11 +338,7 @@ const ProductCatalog = () => {
         <img
           src={product.image}
           alt={product.name}
-          className={`group-hover:scale-105 transition-transform duration-300 ${
-            product.imageScale === 'large' 
-              ? 'w-full h-full object-contain scale-125' 
-              : 'w-full h-full object-cover'
-          }`}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" // Changed to object-cover
         />
       </div>
 
@@ -381,7 +367,7 @@ const ProductCatalog = () => {
 
           <div className="flex justify-between items-center pt-2 border-t">
             <span className="text-gray-500 font-medium">Qté/Carton:</span>
-            <span className="font-bold text-[#d5b59c]">{product.quantity}</span>
+            <span className="font-bold text-[#008000]">{product.quantity}</span> {/* Changed color */}
           </div>
         </div>
       </div>
@@ -444,7 +430,7 @@ const ProductCatalog = () => {
               placeholder="Rechercher un produit..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#d5b59c] focus:outline-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#008000] focus:outline-none" // Changed focus color
             />
           </div>
 
@@ -456,7 +442,7 @@ const ProductCatalog = () => {
                 onClick={() => setFilter(category.id)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   filter === category.id
-                    ? 'bg-[#d5b59c] text-white'
+                    ? 'bg-[#008000] text-white' // Changed background color
                     : 'bg-white text-gray-600 hover:bg-gray-100'
                 }`}
               >

@@ -1,5 +1,8 @@
 import React from 'react';
 import { useState } from "react";
+// Assuming Link and useLocation are correctly imported from 'wouter'
+// Assuming Menu and X icons are correctly imported from '../../lib/icons'
+// Assuming logoImage is correctly imported from '../../pics/logositweb.jpeg'
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "../../lib/icons";
 import logoImage from '../../pics/logositweb.jpeg'; 
@@ -31,7 +34,7 @@ const Header = () => {
               />
             </div>
             <div>
-              <span className="text-3xl font-bold text-gray-900 group-hover:text-[#d5b59c] transition-colors duration-300">
+              <span className="text-3xl font-bold text-gray-900 group-hover:text-[#008000] transition-colors duration-300">
                 The Packer
               </span>
               <div className="text-sm text-gray-500 font-medium">
@@ -43,32 +46,32 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link href="/">
-              <span className={`font-medium transition-all duration-300 hover:text-[#d5b59c] hover:scale-105 ${
-                location === '/' ? 'text-[#d5b59c] border-b-2 border-[#d5b59c] pb-1' : 'text-gray-700'
+              <span className={`font-medium transition-all duration-300 hover:text-[#008000] hover:scale-105 ${
+                location === '/' ? 'text-[#008000] border-b-2 border-[#008000] pb-1' : 'text-gray-700'
               }`}>
                 Accueil
               </span>
             </Link>
             
             <Link href="/products">
-              <span className={`font-medium transition-all duration-300 hover:text-[#d5b59c] hover:scale-105 ${
-                location.includes('/products') ? 'text-[#d5b59c] border-b-2 border-[#d5b59c] pb-1' : 'text-gray-700'
+              <span className={`font-medium transition-all duration-300 hover:text-[#008000] hover:scale-105 ${
+                location.includes('/products') ? 'text-[#008000] border-b-2 border-[#008000] pb-1' : 'text-gray-700'
               }`}>
                 Nos Produits
               </span>
             </Link>
             
             <Link href="/about">
-              <span className={`font-medium transition-all duration-300 hover:text-[#d5b59c] hover:scale-105 ${
-                location === '/about' ? 'text-[#d5b59c] border-b-2 border-[#d5b59c] pb-1' : 'text-gray-700'
+              <span className={`font-medium transition-all duration-300 hover:text-[#008000] hover:scale-105 ${
+                location === '/about' ? 'text-[#008000] border-b-2 border-[#008000] pb-1' : 'text-gray-700'
               }`}>
                 À Propos
               </span>
             </Link>
             
             <Link href="/contact">
-              <span className={`font-medium transition-all duration-300 hover:text-[#d5b59c] hover:scale-105 ${
-                location === '/contact' ? 'text-[#d5b59c] border-b-2 border-[#d5b59c] pb-1' : 'text-gray-700'
+              <span className={`font-medium transition-all duration-300 hover:text-[#008000] hover:scale-105 ${
+                location === '/contact' ? 'text-[#008000] border-b-2 border-[#008000] pb-1' : 'text-gray-700'
               }`}>
                 Contact
               </span>
@@ -100,7 +103,7 @@ const Header = () => {
             <div className="space-y-2">
               <Link href="/" onClick={closeMobileMenu}>
                 <div className={`block px-4 py-3 rounded-lg font-medium transition-colors duration-200 ${
-                  location === '/' ? 'bg-[#f5e7dc] text-[#d5b59c]' : 'text-gray-700 hover:bg-gray-50'
+                  location === '/' ? 'bg-[#e6ffe6] text-[#008000]' : 'text-gray-700 hover:bg-gray-50'
                 }`}>
                   Accueil
                 </div>
@@ -108,7 +111,7 @@ const Header = () => {
               
               <Link href="/products" onClick={closeMobileMenu}>
                 <div className={`block px-4 py-3 rounded-lg font-medium transition-colors duration-200 ${
-                  location.includes('/products') ? 'bg-[#f5e7dc] text-[#d5b59c]' : 'text-gray-700 hover:bg-gray-50'
+                  location.includes('/products') ? 'bg-[#e6ffe6] text-[#008000]' : 'text-gray-700 hover:bg-gray-50'
                 }`}>
                   Nos Produits
                 </div>
@@ -116,7 +119,7 @@ const Header = () => {
               
               <Link href="/about" onClick={closeMobileMenu}>
                 <div className={`block px-4 py-3 rounded-lg font-medium transition-colors duration-200 ${
-                  location === '/about' ? 'bg-[#f5e7dc] text-[#d5b59c]' : 'text-gray-700 hover:bg-gray-50'
+                  location === '/about' ? 'bg-[#e6ffe6] text-[#008000]' : 'text-gray-700 hover:bg-gray-50'
                 }`}>
                   À Propos
                 </div>
@@ -124,7 +127,7 @@ const Header = () => {
               
               <Link href="/contact" onClick={closeMobileMenu}>
                 <div className={`block px-4 py-3 rounded-lg font-medium transition-colors duration-200 ${
-                  location === '/contact' ? 'bg-[#f5e7dc] text-[#d5b59c]' : 'text-gray-700 hover:bg-gray-50'
+                  location === '/contact' ? 'bg-[#e6ffe6] text-[#008000]' : 'text-gray-700 hover:bg-gray-50'
                 }`}>
                   Contact
                 </div>

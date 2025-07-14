@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Home, ChevronRight, Heart, Star, Check, ShoppingBag, Shield, User, Mail } from "../lib/icons";
+import { Link } from "wouter";
+
+// Import design images
 // Removed: import image2 from '../pics/aboutme.jpeg'; // Image removed as requested
+import { Home, ChevronRight, Heart, Star, Check, ShoppingBag, Shield, User, Mail } from "../lib/icons";
 
 const AboutPage = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -91,7 +94,7 @@ const AboutPage = () => {
       title: "The Packer",
       description: "Lancement officiel de l'entreprise",
       icon: <Star className="w-6 h-6" />,
-      color: "from-[#c5a58c] to-[#e5c5a2]" // Custom kraft gradient
+      color: "from-[#008000] to-[#a0ffa0]" // Custom green gradient
     }
   ];
 
@@ -100,7 +103,7 @@ const AboutPage = () => {
       icon: <Check className="w-8 h-8" />,
       title: "Qualité Premium",
       description: "Standards européens appliqués à chaque produit",
-      gradient: "from-[#c5a58c] to-[#e5c5a2]", // Custom kraft gradient
+      gradient: "from-[#008000] to-[#a0ffa0]", // Custom green gradient
       delay: "0ms"
     },
     {
@@ -131,19 +134,19 @@ const AboutPage = () => {
       
       {/* Floating Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-[#e5d5c5] rounded-full opacity-20 animate-pulse"></div> {/* Custom kraft shade */}
-        <div className="absolute top-40 right-20 w-24 h-24 bg-[#f0e0d0] rounded-full opacity-30 animate-bounce" style={{ animationDuration: '3s' }}></div> {/* Custom kraft shade */}
-        <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-[#e0c0a0] rounded-full opacity-25 animate-pulse" style={{ animationDelay: '1s' }}></div> {/* Custom kraft shade */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#e6ffe6] rounded-full opacity-20 animate-pulse"></div> {/* Custom green shade */}
+        <div className="absolute top-40 right-20 w-24 h-24 bg-[#f0fff0] rounded-full opacity-30 animate-bounce" style={{ animationDuration: '3s' }}></div> {/* Custom green shade */}
+        <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-[#e6ffe6] rounded-full opacity-25 animate-pulse" style={{ animationDelay: '1s' }}></div> {/* Custom green shade */}
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#f5e7dc] via-[#faefe6] to-[#fcf5ef] py-16 md:py-24 overflow-hidden"> {/* Custom kraft gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5e7dc]/20 to-[#faefe6]/20"></div> {/* Custom kraft gradient */}
+      <section className="relative bg-gradient-to-br from-[#f0fff0] via-[#f8fff8] to-[#fafffa] py-16 md:py-24 overflow-hidden"> {/* Custom green gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f0fff0]/20 to-[#f8fff8]/20"></div> {/* Custom green gradient */}
         
         {/* Animated Background Shapes */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-[#e0c0a0] to-[#d5b59c] rounded-full opacity-30 animate-spin" style={{ animationDuration: '20s' }}></div> {/* Custom kraft gradient */}
-          <div className="absolute top-1/2 -right-20 w-60 h-60 bg-gradient-to-br from-[#d5b59c] to-[#e0c0a0] rounded-full opacity-20 animate-pulse" style={{ animationDuration: '4s' }}></div> {/* Custom kraft gradient */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-[#c0ffc0] to-[#008000] rounded-full opacity-30 animate-spin" style={{ animationDuration: '20s' }}></div> {/* Custom green gradient */}
+          <div className="absolute top-1/2 -right-20 w-60 h-60 bg-gradient-to-br from-[#008000] to-[#c0ffc0] rounded-full opacity-20 animate-pulse" style={{ animationDuration: '4s' }}></div> {/* Custom green gradient */}
         </div>
         
         <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
@@ -151,19 +154,19 @@ const AboutPage = () => {
           <nav className="mb-8 animate-slideInDown">
             <ol className="flex items-center space-x-2 text-sm">
               <li>
-                <a href="/" className="text-gray-500 hover:text-[#a38b75] transition-all duration-300 flex items-center hover:scale-110"> {/* Custom kraft text */}
+                <a href="/" className="text-gray-500 hover:text-[#006600] transition-all duration-300 flex items-center hover:scale-110"> {/* Custom green text */}
                   <Home className="h-4 w-4" />
                 </a>
               </li>
               <li>
                 <ChevronRight className="h-4 w-4 text-gray-400 mx-2" />
               </li>
-              <li className="text-[#a38b75] font-medium">À propos de moi</li> {/* Custom kraft text */}
+              <li className="text-[#006600] font-medium">À propos de moi</li> {/* Custom green text */}
             </ol>
           </nav>
 
           <div className="text-center">
-            <div className="inline-flex items-center bg-white/80 backdrop-blur-sm text-[#8d7560] px-6 py-3 rounded-full text-sm font-medium mb-8 shadow-lg animate-slideInUp" style={{ animationDelay: '200ms' }}> {/* Custom kraft text */}
+            <div className="inline-flex items-center bg-white/80 backdrop-blur-sm text-[#004d00] px-6 py-3 rounded-full text-sm font-medium mb-8 shadow-lg animate-slideInUp" style={{ animationDelay: '200ms' }}> {/* Custom green text */}
               <Star className="w-4 h-4 text-yellow-500 mr-2 animate-spin" style={{ animationDuration: '3s' }} />
               Notre Histoire
             </div>
@@ -173,7 +176,7 @@ const AboutPage = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-slideInUp" style={{ animationDelay: '600ms' }}>
-              Découvrez l'histoire de <span className="font-semibold text-[#a38b75]">Yassine Benouna</span> et sa passion pour {/* Custom kraft text */}
+              Découvrez l'histoire de <span className="font-semibold text-[#006600]">Yassine Benouna</span> et sa passion pour {/* Custom green text */}
               l'innovation dans l'emballage alimentaire durable au Maroc
             </p>
           </div>
@@ -181,7 +184,7 @@ const AboutPage = () => {
       </section>
 
       {/* Main Content Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-stone-50 to-stone-100">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-green-100">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="lg:flex items-center gap-16">
             
@@ -194,14 +197,14 @@ const AboutPage = () => {
               }`}
             >
               <div className="prose prose-lg max-w-none">
-                <div className="inline-flex items-center bg-[#f5e7dc] text-[#8d7560] px-4 py-2 rounded-full text-sm font-medium mb-6"> {/* Custom kraft bg/text */}
+                <div className="inline-flex items-center bg-[#f0fff0] text-[#004d00] px-4 py-2 rounded-full text-sm font-medium mb-6"> {/* Custom green bg/text */}
                   <Star className="w-4 h-4 mr-2" />
                   Entrepreneur Passionné
                 </div>
                 
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
                   Une Vision Claire pour 
-                  <span className="block bg-gradient-to-r from-[#a38b75] to-[#8d7560] bg-clip-text text-transparent"> {/* Custom kraft gradient */}
+                  <span className="block bg-gradient-to-r from-[#006600] to-[#004d00] bg-clip-text text-transparent"> {/* Custom green gradient */}
                     Révolutionner l'Emballage
                   </span>
                 </h2>
@@ -238,7 +241,7 @@ const AboutPage = () => {
                       key={index}
                       className="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                     >
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-[#c5a58c] to-[#d5b59c] rounded-full flex items-center justify-center text-white"> {/* Custom kraft gradient */}
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-[#008000] to-[#a0ffa0] rounded-full flex items-center justify-center text-white"> {/* Custom green gradient */}
                         {item.icon}
                       </div>
                       <span className="font-medium text-gray-900">{item.text}</span>
@@ -261,7 +264,7 @@ const AboutPage = () => {
               isVisible.values ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="inline-flex items-center bg-[#f5e7dc] text-[#8d7560] px-4 py-2 rounded-full text-sm font-medium mb-6"> {/* Custom kraft bg/text */}
+            <div className="inline-flex items-center bg-[#f0fff0] text-[#004d00] px-4 py-2 rounded-full text-sm font-medium mb-6"> {/* Custom green bg/text */}
               <Heart className="w-4 h-4 mr-2" />
               Nos Valeurs
             </div>
@@ -292,7 +295,7 @@ const AboutPage = () => {
                   
                   {/* Hover arrow */}
                   <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#a38b75] transition-colors duration-300" /> {/* Custom kraft text */}
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#006600] transition-colors duration-300" /> {/* Custom green text */}
                   </div>
                 </div>
               </div>
@@ -302,10 +305,10 @@ const AboutPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#a38b75] to-[#8d7560] text-white relative overflow-hidden"> {/* Custom kraft gradient */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-[#006600] to-[#004d00] text-white relative overflow-hidden"> {/* Custom green gradient */}
         {/* Animated background */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#c5a58c]/20 to-[#d5b59c]/20 animate-pulse"></div> {/* Custom kraft gradient */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#008000]/20 to-[#a0ffa0]/20 animate-pulse"></div> {/* Custom green gradient */}
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full animate-pulse" style={{ animationDuration: '15s' }}></div>
         </div>
@@ -381,7 +384,7 @@ const AboutPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/products" 
-              className="group bg-gradient-to-r from-[#a38b75] to-[#8d7560] text-white px-8 py-4 rounded-xl font-semibold hover:from-[#8d7560] hover:to-[#6b5a4a] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center" // Custom kraft gradient
+              className="group bg-gradient-to-r from-[#006600] to-[#004d00] text-white px-8 py-4 rounded-xl font-semibold hover:from-[#004d00] hover:to-[#003300] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center" // Custom green gradient
             >
               Découvrir Nos Produits
               <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
