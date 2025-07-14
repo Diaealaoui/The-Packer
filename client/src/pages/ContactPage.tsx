@@ -296,7 +296,7 @@ const ContactPage = () => {
             {[
               {
                 question: "Quels sont vos délais de livraison ?",
-                answer: "Nous livrons généralement sous 24-48h pour les commandes en stock. Pour les commandes personnalisées, comptez 3-5 jours ouvrables."
+                answer: "Nous livrons généralement sous 24-48h pour les commandes en stock. Pour les commandes personnalisées, comptez 5-10 jours ouvrables."
               },
               {
                 question: "Proposez-vous des échantillons ?",

@@ -212,18 +212,17 @@ const AboutPage = () => {
                 <div className="space-y-6 text-gray-600 leading-relaxed">
                   <p className="text-lg">
                     Je suis <strong className="text-gray-900">Yassine Benouna</strong>, un jeune entrepreneur marocain 
-                    ayant étudié en France. Mon retour au Maroc s'accompagnait d'une mission claire : 
-                    transformer l'industrie de l'emballage alimentaire de notre pays.
+                    ayant comme mission de transformer et améliorer l'industrie de l'emballage alimentaire au Maroc.
                   </p>
                   
                   <p className="text-lg">
                     Ma passion pour l'innovation et la durabilité me guide dans chaque décision. 
                     Nous utilisons exclusivement les meilleures matières premières, garantissant 
-                    une qualité exceptionnelle et un impact environnemental minimal.
+                    une qualité exceptionnelle et un rendu qui saura mettre en valeur vos produits alimentaires.
                   </p>
                   
                   <p className="text-lg">
-                    L'objectif de The Packer va au-delà du business : nous voulons créer un 
+                    L'objectif de la Société The Packer va au-delà du business : nous voulons créer un 
                     écosystème durable qui profite à nos clients, à notre communauté et à 
                     notre belle planète.
                   </p>
@@ -393,7 +392,7 @@ const AboutPage = () => {
               href="/contact" 
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
             >
-              Parlons de Votre Projet
+              Contactez Nous
             </a>
           </div>
         </div>

@@ -9,14 +9,14 @@ import design4Image from '../pics/carton3.jpeg';
 import design5Image from '../pics/carton.jpeg';
 
 // Import images for the slider
-import cartonImage1 from '../pics/carton.jpg';
-import cartonImage2 from '../pics/carton2.jpg';
-import cartonImage3 from '../pics/carton3.jpg';
-import homepageImage from '../pics/homepage.jpeg'; // Renamed from 'homepage' to 'homepageImage' for clarity
+import cartonImage1 from '../pics/carton1.jpeg';
+import cartonImage2 from '../pics/homepage.jpeg';
+//import cartonImage3 from '../pics/homepage4.jpeg';
+
 import usineImage from '../pics/usine.jpeg'; // New import for the factory section
 
 const HomePage = () => {
-  const sliderImages = [cartonImage1, cartonImage2, cartonImage3, homepageImage]; // Added homepageImage to slider
+  const sliderImages = [cartonImage2, cartonImage1 ]; // Added homepageImage to slider
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -41,8 +41,7 @@ const HomePage = () => {
               key={index}
               src={image}
               alt={`Carton product ${index + 1}`}
-              // object-contain ensures the entire image is visible, object-cover for desktop
-              className={`absolute inset-0 w-full h-full object-contain lg:object-cover object-center transition-opacity duration-1000 ease-in-out ${
+              className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             />
