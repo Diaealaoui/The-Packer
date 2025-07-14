@@ -176,7 +176,7 @@ const AboutPage = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-slideInUp" style={{ animationDelay: '600ms' }}>
-              Découvrez l'histoire de <span className="font-semibold text-[#006600]">Yassine Benouna</span> et sa passion pour {/* Custom green text */}
+              Découvrez l'histoire de <span className="font-semibold text-[#006600]">Yassine Bennouna</span> et sa passion pour {/* Custom green text */}
               l'innovation dans l'emballage alimentaire durable au Maroc
             </p>
           </div>
@@ -211,7 +211,7 @@ const AboutPage = () => {
                 
                 <div className="space-y-6 text-gray-600 leading-relaxed">
                   <p className="text-lg">
-                    Je suis <strong className="text-gray-900">Yassine Benouna</strong>, un jeune entrepreneur marocain 
+                    Je suis <strong className="text-gray-900">Yassine Bennouna</strong>, un jeune entrepreneur marocain 
                     ayant comme mission de transformer et améliorer l'industrie de l'emballage alimentaire au Maroc.
                   </p>
                   
