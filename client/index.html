@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>The Packer Morocco</title> <!-- Updated title for clarity -->
+  <!-- Favicon link to display logo in browser tab -->
+  <link rel="icon" href="client/src/pics/logositweb.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="root"></div>
+  <!-- 
+    Your React application is a Single-Page Application (SPA).
+    For client-side routing to work correctly on page refreshes (e.g., when refreshing /about),
+    your web server must be configured to serve 'index.html' for all routes that
+    do not correspond to a static file. This is known as "History API Fallback".
+
+    Common configurations:
+    - Netlify/Vercel: Use a _redirects file or vercel.json/netlify.toml.
+    - Firebase Hosting: Use firebase.json rewrites.
+    - Nginx: Use try_files $uri $uri/ /index.html;
+    - Apache: Use .htaccess with RewriteRule.
+  -->
+  <script src="/dist/bundle.js"></script> 
+</body>
+</html>

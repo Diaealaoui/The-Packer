@@ -1,0 +1,77 @@
+/* Header.css */
+/* Ensure the header and footer take full width */
+.header, .footer {
+    width: 100%;  /* This ensures the header/footer takes the full viewport width */
+    margin: 0 auto; /* Centers the header/footer if needed */
+    padding: 0 15px; /* Adjusts padding for some spacing from the viewport edges */
+    box-sizing: border-box; /* Ensures padding does not affect the total width */
+}
+
+/* Remove constraints that may limit the width of header or footer */
+.container {
+    max-width: 100%; /* This can prevent the container from limiting child elements */
+    padding: 0; /* Removes padding that could affect the width */
+    margin: 0 auto; /* Keeps the container centered if necessary */
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e2e2e2;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.group:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-input {
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+}
